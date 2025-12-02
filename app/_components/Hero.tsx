@@ -4,7 +4,7 @@ import HeroTextHighlight from "@/app/_components/HeroTextHighlight";
 const Hero = () => {
   return (
     <div id="hero">
-      <div className="poster">
+      <div className="poster  bg-black">
         <Image src="/images/bg2.png" alt="bg" fill className="object-cover" />
       </div>
       <div className="text-box center ">

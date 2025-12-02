@@ -67,22 +67,22 @@
     }
 
     nav {
-      @apply hidden sm:block w-full h-12 relative  md:w-[80%] lg:w-[65%] xl:w-[60%] lg:mr-24 max-w-[800px];
+      @apply hidden sm:block w-full h-12 relative  md:w-[80%] lg:w-[65%] xl:w-[65%] lg:mr-10 max-w-[812px];
       ul {
-        @apply flex justify-end items-center gap-18  h-full rounded-l-full text-xl  px-5 md:gap-15 xl:gap-20  xl:px-10 text-background  font-pop;
+        @apply flex justify-end items-center gap-18  h-full rounded-l-full text-xl  px-5 md:gap-15 xl:gap-18  xl:px-10 text-background  font-pop;
 
         a {
-          @apply relative hover:font-bold transition-all duration-300;
+          @apply relative  transition-all;
         }
       }
     }
   }
 
   #hero {
-    @apply w-full h-dvh min-h-screen overflow-hidden  relative bg-black;
+    @apply w-full h-dvh min-h-screen overflow-hidden   relative;
 
     .poster {
-      @apply absolute h-[97%] w-full overflow-hidden object-cover rounded-b-[10rem] z-0;
+      @apply absolute h-[97%] w-full overflow-hidden object-cover rounded-b-[4rem] sm:rounded-b-[10rem] z-0;
     }
 
     .text-box {
