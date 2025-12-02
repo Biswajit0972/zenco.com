@@ -1,8 +1,8 @@
-import { PropsWithChildren } from "react";
+import { ReactNode } from "react";
 
-const HeroTextHighlight = ({ children }: PropsWithChildren) => {
+const HeroTextHighlight = ({ children, className }: {children:ReactNode, className?:string}) => {
   return (
-    <span>
+    <span className={className}>
       {children}
     </span>
   );
