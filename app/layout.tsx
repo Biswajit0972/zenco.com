@@ -1,5 +1,5 @@
 import type {Metadata} from "next";
-import {Geist_Mono, Lato, Schibsted_Grotesk} from "next/font/google";
+import {Geist_Mono, Lato, Schibsted_Grotesk, Jomolhari} from "next/font/google";
 import "./globals.css";
 import Header from "@/app/_components/Header";
 
@@ -17,6 +17,11 @@ const latoFont = Lato({
     subsets: ["latin"],
     variable: "--font-Lato",
     weight:["100" , "300", "400" , "700" , "900"]
+})
+
+const jhomolHari = Jomolhari({
+    weight:  "400",
+    variable: "--font-Jomolhari"
 })
 
 export const metadata: Metadata = {
