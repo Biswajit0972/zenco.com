@@ -1,5 +1,5 @@
 import type {Metadata} from "next";
-import {Geist_Mono, Lato, Schibsted_Grotesk, Jomolhari} from "next/font/google";
+import {Schibsted_Grotesk, Jomolhari, Poppins} from "next/font/google";
 import "./globals.css";
 import Header from "@/app/_components/Header";
 
@@ -8,16 +8,12 @@ const christenedGrotesque = Schibsted_Grotesk({
     subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
+const geistMono = Poppins({
+    variable: "--font-geist-poppins",
     subsets: ["latin"],
+    weight: ["400", "700", "100", "200", "300", "500", "600", "800", "900"],
 });
 
-const latoFont = Lato({
-    subsets: ["latin"],
-    variable: "--font-Lato",
-    weight:["100" , "300", "400" , "700" , "900"]
-})
 
 const jhomolHari = Jomolhari({
     weight:  "400",
@@ -40,7 +36,7 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body
-            className={`${christenedGrotesque.variable} ${geistMono.variable} ${latoFont.variable} min-h-screen antialiased`}
+            className={`${christenedGrotesque.variable} ${geistMono.variable} ${jhomolHari.variable} min-h-screen antialiased`}
         >
         <Header/>
         <main className="w-full relative max-w-lvw">
