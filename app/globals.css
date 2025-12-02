@@ -1,111 +1,104 @@
 @import "tailwindcss";
 
 :root {
-    --background: #ffffff;
-    --foreground: #CAF319; /* FIXED */
-    --font-geist-sans: "Schibsted Grotesk";
-    --font-geist-mono: "Geist Mono", monospace;
-    --font-lato: "Lato", sans-serif;
-    --text-dark: #000000;
-
+  --background: #ffffff;
+  --foreground: #caf319; /* FIXED */
+  --font-geist-sans: "Schibsted Grotesk";
+  --font-geist-poppins: "Poppins", monospace;
+  --font-lato: "Lato", sans-serif;
+  --text-dark: #000000;
+  --font-primary: "Jomolhari";
+  --text-secondary: #595858;
 }
 
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
-    --font-lato: var(--font-lato);
-    --text-dark: var(--text-dark);
-
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-pop: var(--font-geist-poppins);
+  --font-lato: var(--font-lato);
+  --text-dark: var(--text-dark);
+  --font-primary: var(--font-primary);
+  --text-secondary: var(--text-secondary);
 }
 
 @layer base {
-    body {
-        @apply bg-background text-dark;
-    }
+  body {
+    @apply bg-background text-dark;
+  }
 
-    h1 {
-        @apply text-4xl font-bold font-sans;
-    }
+  h1 {
+    @apply text-4xl font-bold font-sans;
+  }
 
-    h2 {
-        @apply text-3xl font-bold font-sans;
-    }
+  h2 {
+    @apply text-3xl font-bold font-sans;
+  }
 
-    h3 {
-        @apply text-2xl font-bold font-sans;
-    }
+  h3 {
+    @apply text-2xl font-bold font-sans;
+  }
 }
 
 @layer utilities {
-    .center {
-        @apply flex justify-center items-center;
-    }
+  .center {
+    @apply flex justify-center items-center;
+  }
 
-    .stack {
-        @apply flex flex-col;
-    }
+  .stack {
+    @apply flex flex-col;
+  }
 
-    .fl {
-        @apply flex justify-between items-center;
-    }
+  .fl {
+    @apply flex justify-between items-center;
+  }
 }
 
 @layer components {
-    header {
-        @apply min-h-14 max-h-24 w-full overflow-hidden fixed inset-0 top-0 z-50 flex flex-col gap-2 py-2 md:flex-row md:items-center md:justify-between;
+  header {
+    @apply min-h-14 max-h-24 w-full overflow-hidden fixed inset-0 top-0 z-50 flex flex-col gap-2 py-2 md:flex-row md:items-center md:justify-between;
 
-        .logo {
-            @apply flex justify-center items-center w-32 bg-foreground h-20 rounded-r-full;
-
-            h3 {
-                @apply text-3xl font-bold font-sans;
-            }
-        }
-
-        button {
-            @apply flex justify-center items-center p-4 text-2xl font-lato bg-gray-300 mr-2 rounded-xl cursor-pointer relative hover:bg-gray-400 sm:hidden;
-        }
-
-        nav  {
-            @apply hidden sm:block w-full h-full relative  md:w-[85%] lg:w-[60%] xl:w-[43%];
-            ul {
-                @apply flex justify-end items-center gap-18  h-full rounded-l-full text-xl font-lato px-5 md:gap-12 bg-[rgba(255,255,255,0.1)] bg-clip-padding backdrop-filter backdrop-blur-sm border border-gray-400 text-white;
-
-                li {
-                    @apply relative hover:text-foreground;
-                    a {
-                        @apply relative;
-                    }
-                }
-
-            }
-        }
+    .logo {
+      @apply flex justify-center items-center w-32 bg-foreground h-20 rounded-r-full max-w-[302px] md:w-36 lg:w-40 xl:w-48;
     }
 
-    #hero {
-        @apply w-full h-dvh min-h-screen overflow-hidden  relative bg-black;
-
-        .poster {
-            @apply absolute h-[97%] w-full overflow-hidden object-cover rounded-b-[10rem] z-0;
-        }
-
-        .text-box {
-            @apply relative z-10 w-full h-full flex flex-col justify-center items-center gap-4 px-5;
-
-            div {
-                @apply w-full overflow-hidden  text-background relative;
-
-                h1 {
-                    @apply text-[65px] font-bold xl:text-[100px] xl:font-extrabold;
-
-                    span {
-                        @apply inline-flex items-center rounded-full bg-foreground px-5 py-2 text-gray-900 shadow-[0_12px_40px_rgba(213,255,57,0.35)] font-bold overflow-hidden sm:ml-2 xl:text-[60px];
-                    }
-                }
-            }
-        }
+    button {
+      @apply flex justify-center items-center p-4 text-2xl font-lato bg-gray-300 mr-2 rounded-xl cursor-pointer relative hover:bg-gray-400 sm:hidden;
     }
 
+    nav {
+      @apply hidden sm:block w-full h-12 relative  md:w-[80%] lg:w-[65%] xl:w-[60%] lg:mr-24 max-w-[800px];
+      ul {
+        @apply flex justify-end items-center gap-18  h-full rounded-l-full text-xl  px-5 md:gap-15 xl:gap-20  xl:px-10 text-background  font-pop;
+
+        a {
+          @apply relative hover:font-bold transition-all duration-300;
+        }
+      }
+    }
+  }
+
+  #hero {
+    @apply w-full h-dvh min-h-screen overflow-hidden  relative bg-black;
+
+    .poster {
+      @apply absolute h-[97%] w-full overflow-hidden object-cover rounded-b-[10rem] z-0;
+    }
+
+    .text-box {
+      @apply relative z-10 w-full h-full flex flex-col justify-center items-center gap-4 px-5;
+
+      div {
+        @apply w-full overflow-hidden  text-background relative;
+
+        h1 {
+          @apply text-[60px]  xl:text-[120px] xl:font-extrabold font-primary sm:text-[75px] md:text-[80px];
+
+          span {
+            @apply inline-flex items-center rounded-full bg-foreground px-8 py-2 text-gray-900  font-bold overflow-hidden sm:ml-2 sm:mt-0;
+          }
+        }
+      }
+    }
+  }
 }
