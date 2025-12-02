@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 const Logo = () => {
   return (
     <div className="logo">
-        <h3>Zenco</h3>
+        <Image alt="logo" src="/images/zenco_logo.png" width={300} height={60}/>
     </div>
   );
 };
