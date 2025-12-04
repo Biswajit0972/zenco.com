@@ -79,22 +79,23 @@
             }
         }
     }
-
+    /* Hero section */
     #hero {
-        @apply w-full h-dvh min-h-screen overflow-hidden   relative;
+        @apply w-full h-dvh min-h-screen overflow-hidden relative;
 
         .poster {
-            @apply absolute h-[97%] w-full overflow-hidden object-cover rounded-b-[4rem] sm:rounded-b-[10rem] z-0;
+            @apply absolute h-[95%] w-full overflow-hidden object-cover z-0;
         }
 
         .text-box {
-            @apply relative z-10 w-full h-full flex flex-col justify-center items-center gap-4 px-5;
+            @apply relative z-10 w-full h-full flex flex-col justify-center items-center pt-9 px-5;
 
             div {
-                @apply w-full overflow-hidden  text-background relative;
+                @apply w-full overflow-hidden text-background relative;
 
                 h1 {
-                    @apply text-[60px]  xl:text-[120px] xl:font-extrabold font-primary sm:text-[75px] md:text-[80px];
+                    @apply text-4xl xl:text-6xl xl:font-extrabold font-primary
+                    lg:text-7xl sm:text-7xl md:text-5xl;
 
                     span {
                         @apply inline-flex items-center rounded-full bg-foreground px-8 py-2 text-gray-900  font-bold overflow-hidden sm:ml-2 sm:mt-0;
