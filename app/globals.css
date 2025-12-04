@@ -3,7 +3,7 @@
 :root {
     --background: #ffffff;
     --foreground: #caf319; /* FIXED */
-    --font-geist-sans: "Schibsted Grotesk";
+    --font-montserra: "Montserrat", sans-serif;
     --font-geist-poppins: "Poppins";
     --font-lato: "Lato", sans-serif;
     --text-dark: #000000;
@@ -14,7 +14,7 @@
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
+    --font-sans: var(--font-montserra);
     --font-pop: var(--font-geist-poppins);
     --font-lato: var(--font-lato);
     --text-dark: var(--text-dark);
@@ -57,10 +57,13 @@
 
 @layer components {
     header {
-        @apply min-h-14 max-h-24 w-full overflow-hidden fixed inset-0 top-0 z-50 flex flex-col gap-2 py-2 md:flex-row md:items-center md:justify-between;
+        @apply min-h-20  h-28 w-full  overflow-hidden fixed inset-0 top-0 z-50 flex items-end ;
 
         .logo {
-            @apply flex justify-center items-center w-32 bg-foreground h-20 rounded-r-full max-w-[302px] md:w-36 lg:w-40 xl:w-48;
+            @apply  w-[205px] bg-foreground h-[80px]  rounded-r-full max-w-[302px] ;
+            div {
+                @apply  h-full relative w-36 ml-5 flex justify-center items-center overflow-hidden object-cover;
+            }
         }
 
         button {
@@ -68,10 +71,10 @@
         }
 
         nav {
-            @apply hidden sm:block w-full h-12 relative  md:w-[80%] lg:w-[65%] xl:w-[65%] lg:mr-10 max-w-[812px];
+            @apply hidden sm:flex items-center justify-center w-[calc(100%-35%)]  h-full relative  md:w-[69%] lg:w-[65%] xl:w-[60%] lg:mr-5 max-w-[812px] overflow-hidden ;
 
             ul {
-                @apply flex justify-end items-center gap-18  h-full rounded-l-full text-xl  px-5 md:gap-15 xl:gap-18  xl:px-10 text-background  font-pop;
+                @apply flex justify-end items-center h-full rounded-l-full text-base gap-[0.277rem] md:text-[17px] md:gap-[0.1rem]  font-sans lg:gap-8 text-white;
 
                 a {
                     @apply relative  transition-all;
@@ -115,6 +118,7 @@
 
                 div {
                     @apply bg-red-500;
+
                     h2 {
                         @apply text-5xl;
                     }
