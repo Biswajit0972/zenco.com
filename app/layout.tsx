@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Schibsted_Grotesk, Jomolhari, Poppins } from "next/font/google";
+import { Schibsted_Grotesk, Poppins, Kalnia } from "next/font/google";
 import "./globals.css";
 import Header from "@/app/_components/Header";
 
@@ -14,9 +14,10 @@ const geistMono = Poppins({
   weight: ["400", "700", "100", "200", "300", "500", "600", "800", "900"],
 });
 
-const jhomolHari = Jomolhari({
-  weight: "400",
-  variable: "--font-Jomolhari",
+
+const kalnia = Kalnia({
+    weight: ["400", "700", "100", "200", "300", "500", "600"],
+    variable: "--font-kalnia",
 });
 
 export const metadata: Metadata = {
@@ -35,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${christenedGrotesque.variable} ${geistMono.variable} ${jhomolHari.variable} min-h-screen antialiased`}
+        className={`${christenedGrotesque.variable} ${geistMono.variable} ${kalnia.className} min-h-screen antialiased`}
       >
         <Header />
         <main className="w-full relative max-w-lvw">{children}</main>
