@@ -2,6 +2,7 @@ import Logo from "./Logo";
 import NavButton from "@/app/_components/NavButton";
 import {NAV_ITEMS} from "@/types";
 import NavigationLink from "./NavigationLink";
+import {NavWrapper} from "@/app/_components/NavWrapper";
 
 
 const Header = () => {
@@ -12,11 +13,7 @@ const Header = () => {
                 <NavButton/>
             </div>
             <nav>
-                <ul>
-                    {NAV_ITEMS.map((item) => (
-                        <NavigationLink   key={item.href} {...item}/>
-                    ))}
-                </ul>
+              <NavWrapper/>
             </nav>
         </header>
     );
