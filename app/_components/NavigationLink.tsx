@@ -11,7 +11,7 @@ interface NavigationLinkProps extends NavItem {
 const NavigationLink: FC<NavigationLinkProps> = ({...props}) => {
     return (
         <Link key={props.href} href={props.href}
-              className={`px-2 py-1  transform transition-all rounded-full   ${props.page === props.href ? "bg-foreground text-black" : ""}`}
+              className={`px-2 py-1  transform transition-all rounded-full md:px-5    ${props.page === props.href ? "bg-foreground text-black" : ""}`}
               onClick={() => props.setPage(props.href)}>
             {props.label}
         </Link>

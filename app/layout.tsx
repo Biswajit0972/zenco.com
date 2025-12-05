@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Schibsted_Grotesk, Poppins, Kalnia } from "next/font/google";
+import { Schibsted_Grotesk, Poppins, Kalnia,Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/app/_components/Header";
-
-const christenedGrotesque = Schibsted_Grotesk({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const geistMono = Poppins({
   variable: "--font-geist-poppins",
   subsets: ["latin"],
   weight: ["400", "700", "100", "200", "300", "500", "600", "800", "900"],
 });
+
+const montserrat = Montserrat({
+    variable: "--font-montserrat",
+    subsets: ["latin", "cyrillic"],
+    weight: ["300", "400", "500", "600", "700", "800", "900", "100", "200"]
+})
 
 
 const kalnia = Kalnia({
@@ -36,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${christenedGrotesque.variable} ${geistMono.variable} ${kalnia.className} min-h-screen antialiased`}
+        className={`${montserrat.className} ${geistMono.variable} ${kalnia.className} min-h-screen antialiased`}
       >
         <Header />
         <main className="w-full relative max-w-lvw">{children}</main>
