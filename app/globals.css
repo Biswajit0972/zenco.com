@@ -94,8 +94,8 @@
                 @apply w-full overflow-hidden text-background relative;
 
                 h1 {
-                    @apply text-4xl xl:text-6xl xl:font-extrabold font-primary
-                    lg:text-7xl sm:text-7xl md:text-5xl;
+                    @apply text-4xl md:text-5xl lg:text-6xl xl:text-6xl xl:font-extrabold font-primary
+                     sm:text-7xl ;
 
                     span {
                         @apply inline-flex items-center rounded-full bg-foreground px-8 py-2 text-gray-900  font-bold overflow-hidden sm:ml-2 sm:mt-0;
